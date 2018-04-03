@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:edit, :update]
   def index
+  	@posts = Post.all
   end
 
   def new
@@ -9,7 +10,6 @@ class PostsController < ApplicationController
 
   def create
   	@post = Post.new(post_params)
-  	byebug
   	if  @post.save
       redirect_to posts_path, notice: "新增候選人成功!"
     else

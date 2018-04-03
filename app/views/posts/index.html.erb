@@ -1,3 +1,11 @@
-posts index
-
 <%= link_to 'new', new_post_path %>
+<% @posts&.each do |post| %>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://fakeimg.pl/200x100/" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= post.title %></h5>
+      <p class="card-text"><%= post.content %></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+<% end %>
