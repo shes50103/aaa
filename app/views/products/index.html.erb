@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Money</th>
       <th>Currency</th>
+      <th>Tags</th>
       <th>Start at</th>
       <th>End at</th>
       <th colspan="3"></th>
@@ -20,6 +21,7 @@
         <td><%= product.name %></td>
         <td><%= product.money %></td>
         <td><%= product.currency %></td>
+        <td><%= display_tag_list(product.tags) %></td>
         <td><%= product.start_at %></td>
         <td><%= product.end_at %></td>
         <td><%= link_to 'Show', product %></td>
