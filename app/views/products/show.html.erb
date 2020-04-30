@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Money:</strong>
+  <%= @product.money %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @product.currency %>
+</p>
+
+<p>
+  <strong>Start at:</strong>
+  <%= @product.start_at %>
+</p>
+
+<p>
+  <strong>End at:</strong>
+  <%= @product.end_at %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
